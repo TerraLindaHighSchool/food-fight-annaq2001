@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Food_Fight/Prefabs.meta
 guid: 4ff4c6a606e6ad04da2b86b5ff49d173
+=======
+guid: efacd052af4b8324098a270fc43243f6
+>>>>>>> 65023696753a80220c710442a400c58499748f44:Assets/Food_Fight/Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

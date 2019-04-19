@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7cd153022a59da5418bbda0e398c16ed
+=======
+<<<<<<<< HEAD:Assets/Food_Fight/Scripts.meta
+guid: 236989a83946264438d7b780abeb7d3b
+========
+guid: 8ce76fd1ed4801b41932217a15b8e0b8
+>>>>>>>> 65023696753a80220c710442a400c58499748f44:Assets/Food Fight/Scripts.meta
+>>>>>>> 65023696753a80220c710442a400c58499748f44
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
