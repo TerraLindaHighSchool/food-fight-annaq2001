@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Food Fight/Scenes/Scene_1.unity
+=======
+- path: Assets/Food_Fight/Scenes/Scene_1.unity
+>>>>>>> ea54610535ba5613e2dd166522e5a40acb6c99c6
   isLoaded: 1
   isActive: 1
