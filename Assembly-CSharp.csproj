@@ -55,13 +55,16 @@
   <ItemGroup>
      <Compile Include="Assets\Food_Fight\Scripts\CameraController.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\ChooseRandomFruit.cs" />
+     <Compile Include="Assets\Food_Fight\Scripts\DestroyFruit.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\Jump.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\LaunchHeld.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\Move.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\PickUpAndHold.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\PointsOnCollide.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Food_Fight\Scripts\RotateSystem.cs" />
      <Compile Include="Assets\Food_Fight\Scripts\SpawnAndLaunch.cs" />
+     <Compile Include="Assets\Food_Fight\Scripts\Target.cs" />
      <None Include="Assets\Food_Fight\Textures\placeholder.txt" />
      <None Include="Assets\Food_Fight\Scripts\placeholder.txt" />
      <None Include="Assets\Food_Fight\Audio\placeholder.txt" />

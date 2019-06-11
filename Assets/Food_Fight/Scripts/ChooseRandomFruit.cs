@@ -1,23 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fruit
 {
     public string Name { get; }
-    public int num { get; set; }
+    public int Num { get; set; }
     public float Size { get; }
 
     public Fruit(string p_name, int p_num, float p_size)
     {
         Name = p_name;
-        num = p_num;
+        Num = p_num;
         Size = p_size;
     }
 
     public void decrement()
     {
-        num--;
+        Num--;
     }
 }
 
@@ -28,9 +29,11 @@ public class ChooseRandomFruit : MonoBehaviour
         numCarrot = 5, numCucumber = 5, numLeek = 5, numLemon = 5, numMushroom = 5, numOnion = 5, numPear = 5, 
         numPepperoni = 5, numStrawberry = 5, numTomato = 5;
     private List<Fruit> fruits;
-    public GameObject apple;
+    //public GameObject apple;
     public float scale = 2;
     private int totalFruit = 0;
+    public GameObject textObject;
+    private Text text;
 
     // Start is called before the first frame update
     void Start()
@@ -54,25 +57,30 @@ public class ChooseRandomFruit : MonoBehaviour
         if (numTomato > 0) fruits.Add(new Fruit("Tomato", numTomato, 5));
         fruits.ForEach(delegate (Fruit fruit)
         {
-            totalFruit += fruit.num;
+            totalFruit += fruit.Num;
         });
+
+        text = textObject.GetComponent<Text>();
+        text.text = totalFruit + " Fruits";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             int rand = Random.Range(0, fruits.Count);
             GameObject fruit;
             //fruit = Instantiate(GameObject.Find("/Fruit Block/" + fruits[0].name), new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
-            fruit = Instantiate(GameObject.Find("/Fruit Block/" + fruits[rand].Name), new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
+            fruit = Instantiate(GameObject.Find("/Floor/Fruit Block/" + fruits[rand].Name), new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
             fruit.transform.localScale = new Vector3(fruits[rand].Size * scale, fruits[rand].Size * scale, fruits[rand].Size * scale);
             Rigidbody fruitRb = fruit.AddComponent<Rigidbody>();
 
             fruits[rand].decrement();
             totalFruit--;
-            if (fruits[rand].num <= 0) fruits.RemoveAt(rand);
+            if (fruits[rand].Num <= 0) fruits.RemoveAt(rand);
+
+            text.text = totalFruit + " Fruits";
         }
     }
 }

@@ -19,7 +19,7 @@ public class Rotate : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Comma))
         {
-            if (Vector3.up == transform.up)
+            /*if (Vector3.up == transform.up)
             {
                 rb.transform.Rotate(0, rotateSpeed, 0, Space.Self);
             }
@@ -42,11 +42,13 @@ public class Rotate : MonoBehaviour
             else if (Vector3.up == -transform.right)
             {
                 rb.transform.Rotate(-rotateSpeed, 0, 0, Space.Self);
-            }
+            }*/
+
+            rb.transform.Rotate(0, rotateSpeed, 0, Space.World);
         }
         else if (Input.GetKey(KeyCode.Period))
         {
-            if (Vector3.up == transform.up)
+            /*if (Vector3.up == transform.up)
             {
                 rb.transform.Rotate(0, -rotateSpeed, 0, Space.Self);
             }
@@ -69,7 +71,9 @@ public class Rotate : MonoBehaviour
             else if (Vector3.up == -transform.right)
             {
                 rb.transform.Rotate(rotateSpeed, 0, 0, Space.Self);
-            }
+            }*/
+
+            rb.transform.Rotate(0, -rotateSpeed, 0, Space.World);
         }
     }
 }
