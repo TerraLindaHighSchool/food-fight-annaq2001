@@ -18,7 +18,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && inAir)
+        /*if (Input.GetKeyDown(KeyCode.Space) && inAir)
         {
             rb.AddForce(Vector3.up * jumpScalar * 3);
             inAir = true;
@@ -26,6 +26,31 @@ public class Jump : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpScalar);
+        }*/
+
+        if (inAir)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))) {
+                rb.AddForce(Vector3.up * jumpScalar * 5);
+                inAir = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(Vector3.up * jumpScalar * 3);
+                inAir = true;
+            }
+        }
+        else 
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))) {
+                rb.AddForce(Vector3.up * jumpScalar * 1.3f);
+                inAir = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(Vector3.up * jumpScalar);
+                inAir = true;
+            }
         }
     }
 
